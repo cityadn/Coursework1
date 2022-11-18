@@ -1,0 +1,722 @@
+<html>
+<head>
+  <!-- Responsive Web Design: https://www.w3schools.com/html/html_responsive.asp -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<TITLE>Adnan Shah's Homepage</TITLE>
+
+
+<script>
+
+
+ function addItem() {
+	var newItem = document.createElement("div");
+	newItem.innerHTML = document.getElementById("box").value;
+	newItem.onclick = removeItem;
+	document.getElementById("list").appendChild(newItem);
+	saveList();
+ }
+
+ function removeItem() {
+	document.getElementById("list").removeChild(this);
+	saveList();
+ }
+
+ function saveList() {
+	localStorage.storedList = document.getElementById("list").innerHTML;
+ }
+
+ function loadList() {
+	document.getElementById("list").innerHTML = localStorage.storedList;
+	for(var i = 0; i < list.children.length; i++) {
+	 list.children[i].onclick = removeItem;
+	}
+  }
+
+
+</script>
+
+
+<!-- JavaScript - Creating a to-do list: https://www.w3schools.com/howto/howto_js_todolist.asp -->
+<!-- How I changed it: I created a passage that allows the user to create a paragraph of feedback for my CV, rather than aTo-Do List -->
+<!-- Furthermore, I used functions and variables rather than an extended series of unordered lists-->
+
+<!-- How to create a list without bullet points -->
+
+
+<style>
+
+
+  thead {color:cyan}
+  tbody {color:white;}
+
+  ul.no-bullets {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .b {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center
+  }
+
+  .c {
+    font-style: oblique;
+    text-align: center
+  }
+
+  .d {
+    font-family: Great Vibes Font;
+    font-style: oblique;
+    text-align:center;
+  }
+
+  html {
+    height:100%
+  }
+
+  table,th,td{border:1px solid;
+    border-style:dotted;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+
+  body {
+  min-height:100%;
+  max-width:700px;
+  margin: auto;
+  }
+
+  .center {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+  }
+
+  .text-align {
+    text-align: center
+  }
+
+  .element {
+    position: fixed;
+    margin: 0 ;
+    padding: 0;
+  }
+
+  .element2 {
+    position: fixed;
+    top: 100;
+    margin: 0 ;
+    padding: 0;
+  }
+
+  .background-color {
+    background-color: black;
+    text-align: center;
+  }
+
+  </style>
+
+
+</head>
+
+
+<!-- Creating the Ribbon: https://www.geeksforgeeks.org/simple-portfolio-website-design-using-html/ -->
+<!-- How I Changed it: I changed the sizes, widths and heights of each cell, and I changed the titles of each cell
+In addition, I added a second cell row, rather than extending the first row to the end of the web page.-->
+
+
+  <!--Header(start)-->
+  <table id="header" class="element" border="0" width="46%"
+      cellpadding="0" cellspacing="0" bgcolor="#981a1a">
+
+      <tr>
+          <td>
+              <table border="0" cellpadding="15" class="text-align"
+                  cellspacing="0" width="100%" height="70px">
+                  <tr>
+                      <td>
+
+
+                      </td>
+
+                      <td>
+                          <font face="Comic sans MS" size="6" >
+                              <b>Adnan's CV</b>
+                          </font>
+                      </td>
+
+                      <td>
+                          |
+                      </td>
+
+                      <td>
+                          <a href="#" style="text-decoration:none">
+                              <font face="Verdana" size="6" color=black>
+                                  Home
+                              </font>
+                          </a>
+                      </td>
+
+                      <td>
+                          |
+                      </td>
+
+                      <td>
+                          <a href="#skills" style="text-decoration:none">
+                              <font face="Verdana" size="6" color=black>
+                                  My Skills
+                              </font>
+                          </a>
+                      </td>
+
+                      <td>
+                          |
+                      </td>
+
+                      <td>
+                          <a href="#work" style="text-decoration:none">
+                              <font face="Verdana" size="6" color=black>
+                                  Work Experience
+                              </font>
+                          </a>
+                      </td>
+
+                      <td>
+                          |
+                      </td>
+
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!--Header(end)-->
+
+    <!--Header(start)-->
+    <table id="header" class="element2" border="0" width="46%"
+        cellpadding="0" cellspacing="0" bgcolor="#981a1a">
+
+        <tr>
+            <td>
+                <table border="0" cellpadding="15" class="text-align"
+                    cellspacing="0" width="100%" height="70px">
+                    <tr>
+                        <td>
+
+
+                        </td>
+
+                    <td>
+                        <a href="#education" style="text-decoration:none">
+                            <font face="Verdana" size="6" color=black>
+                                Education
+                            </font>
+                        </a>
+                    </td>
+
+                    <td>
+                        |
+                    </td>
+
+
+                    <td>
+                        <a href="#contact" style="text-decoration:none">
+                            <font face="Verdana" size="6" color=black>
+                                Contact
+                            </font>
+                        </a>
+                    </td>
+
+                    <td>
+                        |
+                    </td>
+
+                    <td>
+                        <a href="#interests" style="text-decoration:none">
+                            <font face="Verdana" size="6" color=black>
+                                Interests
+                            </font>
+                        </a>
+                    </td>
+
+                    <td>
+                        |
+                    </td>
+
+                    <td>
+                        <a href="#references" style="text-decoration:none">
+                            <font face="Verdana" size="6" color=black>
+                                References
+                            </font>
+                        </a>
+                    </td>
+
+                  </tr>
+              </table>
+          </td>
+      </tr>
+  </table>
+  <!--Header(end)-->
+
+
+<body background="C:\Users\adnan\OneDrive\Documents\Computing Coursework 1\Images\Technology2.jpg" text=white link=blue vlink=blue alink=blue>
+
+
+<div class="background-color">
+
+  <!-- How to create empty space: https://crunchify.com/basic-html-how-do-you-create-blank-space-in-html/ -->
+  <p> &nbsp; </p>
+  <p> &nbsp; </p>
+  <p> &nbsp; </p>
+  <p> &nbsp; </p>
+  <p> &nbsp; </p>
+  <p> &nbsp; </p>
+  <p> &nbsp; </p>
+  <p> &nbsp; </p>
+  <p> &nbsp; </p>
+  <p> &nbsp; </p>
+
+</div>
+
+
+<div class="background-color">
+
+<h2 class="text-align";> ADNAN SHAH </h2>
+<i>
+<dl class="text-align">
+<dt> Your average student
+<dt> 86 Freshwell Avenue, Romford, RM6 5DR
+<dt> Tel: +44 0792 6238 461 Email: adnan.shah.2004@gmail.com
+<dt> Department of <a href="https://www.city.ac.uk/about/schools/science-technology/computer-science">Computer Science</a><br>
+<dt> Department of <a href="https://www.city.ac.uk/about/schools/science-technology">Science and Technology</a>
+<dt> <a href="https://www.city.ac.uk/">City University</a>
+<dt> London
+</dl>
+</i>
+
+</div>
+
+
+<hr>
+
+
+<div id ="profile picture" class="background-color">
+
+<h2 class="text-align"> PROFILE PICTURE </h2>
+<img src="C:\Users\adnan\OneDrive\Documents\Computing Coursework 1\Images\Me-Modified.png" alt="Me" width=25% height=25% class=center>
+
+</div>
+
+
+<hr>
+
+
+<div id ="personal profile" class="background-color">
+
+<h3 class="text-align">PERSONAL PROFILE</h3>
+<P class="b">
+I am a hard-working, motivated, prepared and dependable individual with developed
+and excellent multi-tasking skills and organisational skills, as well as being
+knowledgeable in Computer Science and IT. I possess integrity, initiative and I
+am determined to take on-board any new challenge/obstacle that is thrown to me.
+Furthermore, I love working with others. I say this with no doubts: I am a team
+player; an individual who loves to converse and work with fellow colleagues. With
+that being said, I am quite comfortable with working independently when required
+due to my outstanding work ethic and persistence. I am keen to gain employment with
+a company where I can receive individual and team-based training, as well as a variety
+of extraordinary experiences to be had. In addition, I want to work for an organisation
+that is heavily focused on aiding others in differing/innovative ways, as helping others
+solve problems is one of my main focuses.
+
+<a href="https://oakspark.co.uk/index.asp">
+  <abbr title="Oaks Park High School">OPHS,</a>
+<a href="https://johnbramston.redbridge.sch.uk/redbridge/primary/john-bramston">
+  <abbr title="John Bramston Primar School">JBPS,</a>
+<a href="https://oakspark.co.uk/Sixth-Form/">
+  <abbr title="Oaks Park Sixth Form">OPSF,</a>
+
+</P>
+
+
+<P>Link to: <a href="#contact">Contact information</a></P>
+</div>
+
+<hr>
+
+<div id ="skills" class="background-color">
+
+<h3 class="text-align"> MY SKILLS </h3>
+
+<tbody>
+
+<table width=100%>
+
+  <tr>
+    <td>Python</td>
+    <td>⭐⭐⭐⭐</td>
+  </tr>
+  <tr>
+    <td>CSS</td>
+    <td>⭐⭐⭐⭐</td>
+  </tr>
+  <tr>
+    <td>HTML</td>
+    <td>⭐⭐⭐⭐⭐</td>
+  </tr>
+  <tr>
+    <td>Java</td>
+    <td>⭐</td>
+  </tr>
+
+</tbody>
+
+</table>
+
+  <br>
+  <ul class="no-bullets">
+    <li>1. A varied level of knowledge in Computer Science, IT, Physics and Mathematics</li>
+    <li>2. Knowledge in Python</li>
+    <li>3. Excellent Multi-Tasking Skills</li>
+    <li>4. Outstanding Work-Ethic</li>
+    <li>5. Team-Player</li>
+    <li>6. The Ability to be Independent when Required</li>
+    <li>7. Good Communication Skills</li>
+  </ul>
+  <!-- How to create a list without bullet points -->
+</div>
+
+<hr>
+
+  <div id ="work" class="background-color">
+  <h3 class="text-align">WORK EXPERIENCE/ACHIEVEMENTS</h3>
+  <ul class="no-bullets">
+
+    <li><b>Aug 2021 - Goldman Sachs Inc. - Virtual Work Experience</b></li>
+      <p>Password Cracker - At 16, after my work in the Commonwealth Bank of
+         Australia, I took part in the Goldman Sachs engineering program, a Cyber
+         Security related program where I had to decrypt passwords and
+         passphrases using MD5 hash function tools online. Here I had a taste of
+         a Cyber Security career, as well as what the day-to-day tasks
+         entailed, based on the decryption task, the note-taking process, and
+         the emailing task where I had to email my co-workers with more secure
+         password policies.
+      </p>
+
+      <br>
+
+      <li><b>Aug 2021 - The Commonwealth Bank of Australia - Virtual Work Experience</b></li>
+        <p>At 16, straight after my work in the Anz corporation, I completed the
+           Commonwealth Bank program for ‘careers in tech’. It was here where I
+           was truly tested, as I went through tasks related to 5 different
+           sections of technology and business: UI/UX design, Software
+           Engineering, Cyber Security, Data Science/Data Analytics and
+           Robotics/AI. Although my favourite had to be the Software Engineering
+            section, this program had thoroughly tested how quickly I can adapt
+            to the different aspects of the technology industry.
+        </p>
+
+      <br>
+
+      <li><b>Aug 2021 - @Anz (Australia and New Zealand Banking Group Limited)  - Virtual Work Experience</b></li>
+        <p>At 16, straight after my work in BCG, I participated in a Cyber Anz
+          program, where I had to navigate through the network traffic of the
+          company to detect and extract multiple files that could be suspicious.
+          I completed this task using Wireshark, a free and open-source packet
+          analyzer. From there, I identified files that were mostly harmless.
+          However, there were two files that were ‘broken’, which I had
+          identified.
+        </p>
+
+      <br>
+
+      <li><b>July 2021 - BCG (Boston Consulting Group)  - Virtual Work Experience</b></li>
+        <p>App Marketing Mentee - At 16, during the summer, I partook in a BCG
+          consulting program, where I developed analytical and problem-solving
+          skills through project-managerial tasks, where I was tasked with
+          brainstorming ideas to improve a coffee purchase app made by CoffeeCo
+          (UK), and the planning of how those ideas can be implemented and
+          refined within the app to boost sales, ranging from UI/UX design
+          adjustments, and geo-targeting location software.
+        </p>
+
+      <br>
+
+      <li><b>Aug 2020 - NCS (National Citizen Service) - Loxford Youth Centre IG1 2NS</b></li>
+        <p>Volunteering - At 15 years of age, during the lockdown due to the
+          corona-virus pandemic, I enrolled into a volunteering program
+          organised by NCS. During the program, I developed my communication
+          and problem-solving skills with a group of 12 other teenagers through
+          the planning of a project that would aid our local community by
+          fundraising for Free Your Mind (https://www.freeyourmindcic.com/).
+        </p>
+
+      <br>
+
+      <li><b>Aug. 2019 -	NCL (Nelson College London) - Olympic House, Ilford, IG1 IBA</b></li>
+        <p>Administrator assistant - At the age of 14, I began working at my
+          mother’s original college for two weeks to gain work experience in the
+          IT industry. There, I got to experience an office environment myself.
+        </p>
+
+      <br>
+
+      <li><b>Autumn 2018-19 - Homerton College - Hills Road, Cambridge, CB2 8PH</b></li>
+        <p>Scholars Programme - While undertaking my GCSE courses, I was
+          enrolled into a university scholars programme, where I completed a
+          university style essay, one which was graded at the optimum level of 1
+          (1 being the highest, 4 being the lowest) by university professors.
+        </p>
+
+  </ul>
+</div>
+
+<hr>
+
+<div id ="education" class="background-color">
+<h3 class = "Header" style="text-align:center">EDUCATION</h3>
+
+<table class:"b" cellspacing="20" style="margin-left:auto; margin-right:auto; border:5px solid red; border-collapse:collapse; border-style: dashed;text-align:center;">
+
+<thead>
+
+  <tr>
+    <th>A-Level</th>
+    <th colspan="2">Grade</th>
+  </tr>
+
+</thead>
+
+<tbody>
+
+  <tr>
+    <td >Computer Science</td>
+    <td>B</td>
+  </tr>
+
+  <tr>
+    <td>Physics</td>
+    <td>C</td>
+  </tr>
+
+  <tr>
+    <td>Maths</td>
+    <td>C</td>
+  </tr>
+
+</tbody>
+
+</table>
+
+<br>
+
+<table class:"b" cellspacing="20" style="margin-left:auto; margin-right:auto; border:5px solid red; border-collapse:collapse; border-style: dashed;text-align:center;">
+
+<thead>
+
+    <tr>
+    <th>AS-Level</th>
+    <th colspan="2">Grade</th>
+  </tr>
+
+</thead>
+
+<tbody>
+
+  <tr>
+    <td>Computer Science</td>
+    <td>A</td>
+  </tr>
+
+  <tr>
+    <td>Physics</td>
+    <td>B</td>
+  </tr>
+
+  <tr>
+    <td>Maths</td>
+    <td>C</td>
+  </tr>
+
+</tbody>
+
+</table>
+
+<table class:"c" cellspacing="20" style="margin-left:auto; margin-right:auto; border:5px solid red; border-collapse:collapse; border-style: dashed;text-align:center;">
+
+  <br>
+
+<thead>
+
+  <tr>
+    <th>GCSE Subject</th>
+    <th>Grade</th>
+  </tr>
+
+</thead>
+
+<tbody>
+
+  <tr>
+    <td>Computer Science</td>
+    <td>8</td>
+  </tr>
+
+  <tr>
+    <td>Maths</td>
+    <td>7</td>
+  </tr>
+
+  <tr>
+    <td>French</td>
+    <td>8</td>
+  </tr>
+
+  <tr>
+    <td>Business</td>
+    <td>9</td>
+  </tr>
+
+  <tr>
+    <td>Physics</td>
+    <td>8</td>
+  </tr>
+
+  <tr>
+    <td>Geography</td>
+    <td>7</td>
+  </tr>
+
+  <tr>
+    <td>English Literature</td>
+    <td>8</td>
+  </tr>
+
+  <tr>
+    <td>English Language</td>
+    <td>7</td>
+  </tr>
+
+  <tr>
+    <td>Biology</td>
+    <td>8</td>
+  </tr>
+
+  <tr>
+    <td>Chemistry</td>
+    <td>8</td>
+  </tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<hr>
+
+<div id ="interests" class="background-color">
+<h3 class="text-align";>INTERESTS</h3>
+<p class="c">As a creative and laid-back individual, I adore music of all genres as it motivates
+   me to ponder through a vast array of ideas when working. Occasionally, I dabble with
+    a musical instrument myself. I do play the keyboard as an escape to a new reality,
+    an open-world that opens my mind to a path of creative thinking. Music has proven to be
+    one of the largest keys to success in the past. For example, the hedge fund billionaire Bruce Kovner,
+     was a pianist. Alan Greenspan, former chairman of the Federal Reserve, a professional clarinet
+     and saxophone player. Another hobby that I like to indulge in is fitness. This has
+     taught me discipline and it has provided me with new and uplifting outtakes on life
+     itself. Fitness has improved my work-ethic and persistent attitude throughout the
+     years, and I hope that it will continue to do so.
+ </p>
+</div>
+
+<hr>
+
+<div id ="contacts" class="background-color">
+<H3 class="text-align";><A NAME = "contact">CONTACT INFORMATION</a></H3>
+
+<ADDRESS>Adnan Shah</ADDRESS>
+<ADDRESS>Course: Computer Science and Games Technology</ADDRESS>
+<ADDRESS>Great Hall</ADDRESS>
+<ADDRESS>City, University of London</ADDRESS>
+<ADDRESS>London</ADDRESS>
+<ADDRESS>+44 0792 6238 461</ADDRESS>
+</div>
+
+<hr>
+
+<div id ="references" class="background-color">
+  <footer>
+    <h3 class="text-align";>REFERENCES AVAILABLE UPON REQUEST</h3>
+
+    <ul>
+      <li><a href="lmcdonnell@oakspark.redbridge.sch.uk"><b>L Mcdonell</b></a></li>
+      <li>Oaks Park High School, 45-65 Oaks Lane, Ilford IG2 7PQ, Tel: 020 8590 2245 </li>
+      <iframe
+      width=500px
+      height=150px
+      frameborder="0px"
+      style="border: 0px"
+      src="https://oakspark.co.uk/Sixth-Form/">
+    </iframe>
+    </div>
+  </footer>
+
+<hr>
+
+<div>
+ <div class="header">
+   <p></p>
+ </div>
+
+ <div class="app">
+  <p style="background-color:black ;font-size:30px; text-align:center;?"><b>Like My CV?</b></p>
+
+  <figure style="background-color:black;">
+    <figcaption><u>Reference: JavaScript - Creating a to-do list:</u><a href="https://www.w3schools.com/howto/howto_js_todolist.asp">https://www.w3schools.com/howto/howto_js_todolist.asp</a></figcaption>
+  </figure>
+
+  <input type="text" id="box" value="Type here to give feedback"/>
+  <br/>
+  <input type="button" value="Add item" onclick="addItem();"/>
+  <br/>
+   <div id="list"></div>
+ </div>
+ <script>
+  if(localStorage.storedList) {
+   loadList();
+  }
+ </script>
+</div>
+
+<div style="background-color:white;">
+  <p> &nbsp; </p>
+  <p> &nbsp; </p>
+  <p> &nbsp; </p>
+  <p> &nbsp; </p>
+  <p> &nbsp; </p>
+  <p> &nbsp; </p>
+  <p> &nbsp; </p>
+  <p> &nbsp; </p>
+  <p> &nbsp; </p>
+  <p> &nbsp; </p>
+
+  <figure style="background-color:black; text-align:center;">
+    <figcaption><u>Reference: How to create empty space:</u><a href="https://crunchify.com/basic-html-how-do-you-create-blank-space-in-html/">https://crunchify.com/basic-html-how-do-you-create-blank-space-in-html/</a></figcaption>
+  </figure>
+
+</div>
+
+<BR>
+<BR>
+
+
+</body>
+</html>
