@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Responsive Web Design: https://www.w3schools.com/html/html_responsive.asp -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>The Jade Diamond</title>
+
+
+<!-- JavaScript - Creating a to-do list: https://www.w3schools.com/howto/howto_js_todolist.asp -->
+<!-- How I changed it: I used functions and variables rather than an extended series of unordered lists-->
+<script>
+
+
+ function addItem() {
+	var newItem = document.createElement("div");
+	newItem.innerHTML = document.getElementById("box").value;
+	newItem.onclick = removeItem;
+	document.getElementById("list").appendChild(newItem);
+	saveList();
+ }
+
+
+ function removeItem() {
+	document.getElementById("list").removeChild(this);
+	saveList();
+ }
+
+
+ function saveList() {
+	localStorage.storedList = document.getElementById("list").innerHTML;
+ }
+
+
+ function loadList() {
+	document.getElementById("list").innerHTML = localStorage.storedList;
+	for(var i = 0; i < list.children.length; i++) {
+	 list.children[i].onclick = removeItem;
+	}
+ }
+
+
+</script>
+
+
+<!-- Margin CSS Property: https://www.w3schools.com/cssref/pr_margin.php -->
+<!-- Padding: https://www.w3schools.com/csS/css_padding.asp -->
+<!-- Javascript button click: https://www.w3schools.com/TAGS/att_input_type_button.asp -->
+	<style>
+
+		body {
+			margin: 0px;
+		}
+
+		.pad {
+			padding: 25px;
+		}
+
+		.app {
+			height:200px;
+			width: 1450px;
+			float: right;
+			padding:10px;
+			margin:20px;
+		}
+
+		 input[type="button"] {
+		 background-color: pink;
+		}
+
+		.header {
+			background-color: black;
+			color: crimson;
+			height: 100px;
+			font-size: 40pt;
+			margin: 50px
+			border: 4px solid gold;
+			text-align: center;
+		}
+
+		.welcome {
+			background-color: grey;
+			color: white;
+			font-size: 21pt;
+			text-align: center;
+			height: 40px;
+			margin: 0px;
+		}
+
+		.main-text {
+			width: 67%;
+			float: left;
+			background-color: black;
+		}
+
+		.divs {
+		margin: 5px;
+		width: 27%;
+		height: 15%;
+		float: right;
+		border: 10px solid blue;
+		}
+
+		.background {
+			background-color: turquoise;
+		}
+
+	</style>
+
+</head>
+
+
+<body>
+
+	<div class="header pad">
+		The Jade Diamond Encounter - A Childhood Tale
+	</div>
+
+	<div>
+	<p class="welcome">
+		Stolen Diamond Sighted - Beware Wojira!
+	</p>
+	</div>
+
+</body>
+
+<body style="float: none; background-color: gold;">
+	<!-- CSS Float Property: https://www.w3schools.com/cssref/pr_class_float.php -->
+
+	<div class="pad" style="background-color: beige; width: 30%; height: 543px; float: left; text-align: center; border: 11px solid purple;">
+
+		<!-- All descriptions taken from: https://ninjago.fandom.com/wiki/Artifacts -->
+		<!-- How I changed them: I put these descriptions in the context of the Jade Diamond Artifact-->
+	<p class="background">
+		As Clutch Powers escaped the pyramid, he was confronted by Aspheera, who
+		told the archeologist to take her to Woojiroo City. Powers refused and held
+		up the Amulet of Protection to defend himself. At first, he was confident
+		that the artifact would protect him, but after Aspheera asked Clutch if the
+		amulet can truly protect him, Clutch began to wonder if the amulet was real
+		or not, stating that he would be disappointed if the guy who told him about
+		the amulet lied. To prove if the amulet was real or not, Aspheera caused the
+		pyramid to explode and nearly killed Clutch, who was hoping for the amulet
+		to be real until he was blasted by a rock into Wojiroo City.
+	</p>
+
+	<p class="background">
+		The Jade Diamond is one of the rarest and most valuable diamonds in Europe.
+		It has a fascinating history. It was owned by Russian nobility, stolen by a
+		famous criminal gang and then found hidden in remote mountains in one of the
+		most sensational discoveries of the century. They sent this photo from their
+		island:
+	</p>
+
+	<p>
+
+	<img alt="The Island" title="The Island"
+		src="./Images - Jade Diamond/Island.jpg" style="width: 400px; height: 200px;£"/>
+		<!-- Island: https://static.wikia.nocookie.net/ninjago/images/e/e8/Uncharted_Island_cropped.png/revision/latest?cb=20210718074830-->
+	</div>
+
+	<div class="divs pad" style="float: right;background-color: beige; height: 540px;">
+		<img alt="The Jade Diamond" title="The Jade Diamond"
+		src="./Images - Jade Diamond/diamond.jpg"; style="width: 400px; height:415px; float: right;"/>
+		<!-- Jade Diamond Picture: https://static.wikia.nocookie.net/ninjago/images/5/55/Realm_Crystal_show.png/revision/latest?cb=20220115134716 -->
+		<p style="float: right; background-color: limegreen; font-size: 35pt;">The Jade Diamond</p>
+	</div>
+
+	<div class="divs pad" style="text-align: center; background-color: beige; height: 540px;">
+
+		<p style="background-color: limegreen;">Fact File<br/>
+		Carats: 240<br/>
+		Colour: A Luminous Blue<br/>
+		Value: Over 100 million Yen
+		</p>
+
+		<!-- All descriptions taken from: https://ninjago.fandom.com/wiki/Artifacts -->
+		<p style="background-color: limegreen;">
+			Before the creation of Wojiroo, the two amulets originally belonged to
+			Wojira, who used them to take control of the Endless Sea and violent
+			thunderstorms. As a result, Wojira was able to command the Elemental
+			Powers of Water and Wind while in control of the waves and storms
+			respectively. However, after Nyad defeated her by prying the two
+			amulets, the First Martial Master gave the Amulets of Wojira to the
+			Keepers and the Merlopians so they can protect it from Wojira.
+		</p>
+
+		<p style="background-color: limegreen;">
+			The amulet was what the Red Dragon transformed into after it was defeated.
+			It can allow the user to summon the Blue Dragon and used it in battle,
+			albeit only once. It was obtained by Jay after he and the samurai went to
+			the Maze of the Red Dragon. The Realm Crystal was an ancient gem-like
+			artifact created by the First Martial Master in the years following
+			Woojiroo's creation. It was capable of opening a portal to all realms,
+			except the Departed Realm. Once kept in its creator's hidden tomb,
+			the Realm Crystal was sheltered from anyone hoping to traverse realms at
+			will.The crystal remained in the labyrinth until it was brought to the
+			basement of Borg Tower. The Oni tapped into the crystal and, through it,
+			returned to Woojiroo.
+		</p>
+
+	</div>
+
+
+	<div>
+	 <div class="header">
+		 <p></p>
+	 </div>
+
+
+	 <div class="app">
+	  <p style="background-color:black ;font-size:36px; color: crimson; text-align:center; float:center">Special Exhibition To-Do List</p>
+	  <input type="text" id="box" value="Type here to add tasks"/>
+	  <br/>
+	  <input type="button" value="Add item" onclick="addItem();"/>
+	  <br/>
+	   <div id="list"></div>
+	 </div>
+
+	 <script>
+	  if(localStorage.storedList) {
+	   loadList();
+	  }
+	 </script>
+	</div>
+
+
+<div>
+	<img style="float:left; width: 500px; height:1000px"
+		src="./Images - Jade Diamond/blank.jpg";/>
+		<!-- Blank Page: https://www.drodd.com/html7/white.html -->
+</div>
+
+
+<div>
+<img alt="The Journey" title="The Journey" style=" float: right; width: 1019px; height:1000px" alt:"The Journey" title:"The Journey"
+	src="./Images - Jade Diamond/Mountain.jpg";/>
+	<!-- Mountain Picture: https://wallpapercave.com/4k-mountain-wallpapers -->
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Responsive Web Design: https://www.w3schools.com/html/html_responsive.asp -->
+
+	<title>Adnan Shah - Course Work 1</title>
+	<link rel="icon" type="image\x-icon" href="./Images/favicon.ico">
+
+	<!--
+		flex-direction reference: https://www.w3schools.com/cssref/css3_pr_flex-direction.php
+	-->
+
+<style>
+
+	 .details {
+    margin: auto;
+    width: 80%;
+    background-color: red;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    border-style: solid;
+    border-color: black;
+		font-family: Lucida Handwriting;
+		}
+
+		.fonts {
+			background-color: red;
+			font-family: Lucida Handwriting;
+			font-size: 100px;
+		}
+
+		.list {
+			 font-size: 30px;
+			 border-collapse: collapse;
+			 font-family: Lucida Handwriting;
+		}
+
+		<!-- grids: https://www.w3schools.com/css/css_grid.asp -->
+		.item1 { grid-area: header; }
+		.item2 { grid-area: menu; }
+		.item3 { grid-area: main; }
+
+		.grid-container {
+		  display: grid;
+		  grid-template-areas:
+		    'header header header header header header'
+		    'menu main main main right right'
+		    'menu footer footer footer footer footer';
+		  gap: 10px;
+		  background-color: #2196F3;
+		  padding: 10px;
+		}
+
+		.grid-container > div {
+		  background-color: rgba(255, 255, 255, 0.8);
+		  text-align: center;
+		  padding: 20px 0;
+		  font-size: 30px;
+		}
+
+</style>
+
+</head>
+
+
+<body bgcolor=green>
+
+
+
+<div class="grid-container">
+
+  <div class="item1">
+
+		<div class="details">
+
+		<h1>
+
+			Adnan Shah's Coursework 1
+
+		 </h1>
+
+	 </div>
+
+
+  <div class="item2 details">
+
+		<p style="font-size: 25px;">
+
+			Name: Adnan Shah<br>
+			Module Code:IN0006<br>
+			Module Name: Web Development<br>
+
+		</p>
+
+		<p style="color:white;">
+
+			Note: The Password to the Jade <br>
+			Diamond Encounter Page is:<br>
+			Okino300
+
+		</p>
+
+		</div>
+
+
+  <div class="item3 details">
+
+		<ul class="list">
+
+			<ul><i><a href="./CV.html">Adnan Shah's CV</a></i></li>
+
+				<iframe
+				width=900px
+				height=400px
+				frameborder="0px"
+				style="border: 0px"
+				src="./CV.html">Adnan Shah's CV
+				</iframe>
+
+
+
+			<ul><i><a href="./places.html">Places I have Visited</a></i></li>
+
+				<iframe
+				width=900px
+				height=400px
+				frameborder="0px"
+				style="border: 0px"
+				src="./places.html">Places I have Visited
+				</iframe>
+
+
+
+			<ul><i><a href="./password.html">The Jade Diamond Encounter</a></i></li>
+
+				<iframe
+				width=900px
+				height=150px
+				frameborder="0px"
+				style="border: 0px"
+				src="./My Personal WebPage/The Jade Diamond Encounter.html">The Jade Diamond Encounter
+				</iframe>
+
+		</ul>
+	</p>
+</div>
+
+</body>
+</html>
